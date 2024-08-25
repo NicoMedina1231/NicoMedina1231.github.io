@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+    /* 
+    background: #001B30;*/
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.logo{
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.navbar {
+    display: flex;
+    list-style: none;
+}
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navbar a::before{
+    content: '';
+    background-color: #fff;
+    width: 0;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    position: absolute;
+    transition: .4s;
+}
+.navbar a:hover::before{
+    width: 100%;
+}
+
+/*PRUEBA DE IMAGENES*/
+.slideshow {
+    position: relative;
+    margin-top: 72px;
+    width: 100%;
+    height: 600px; /* Ajusta según necesites */
+    overflow: hidden;
+}
+
+.slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: slideShow 15s infinite;
+}
+
+.fade1 {
+    background-image: url('./images/264.jpg');
+    animation-delay: 0s;
+}
+
+.fade2 {
+    background-image: url('./images/manos-con-signo-reducir-reutilizar-y-reciclar-.jpg');
+    animation-delay: 5s;
+}
+
+.fade3 {
+    background-image: url('./images/reciclar-2048x1124.jpg');
+    animation-delay: 10s;
+}
+
+@keyframes slideShow {
+    0% { opacity: 0; }
+    33.33% { opacity: 1; }
+    66.66% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff; 
+    padding: 20px;
+    background-color: #111e; 
+    width: 80%;
+    font-size: 22px;
+    border-radius: 8px;
+}
+
+.titulo-reciclar {
+    color: #0f8522; 
+    font-size: 35px; 
+    margin-bottom: 10px;
+}
